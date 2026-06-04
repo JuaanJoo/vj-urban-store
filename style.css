@@ -591,12 +591,23 @@ nav ul li:has(a[style*="display: none"]) {
     }
 
     /* PANTALLA DE CATEGORÍAS EN CELULAR */
+   /* PANTALLA DE CATEGORÍAS EN CELULAR (REPARADO) */
     .categorias-seccion {
-        padding: 80px 15px 20px 15px !important; /* Espacio arriba para que el header no la tape */
-        overflow-y: auto !important; /* ¡CLAVE! Si el celular es muy pequeño, permite scroll para ver las 3 categorías */
         position: fixed;
+        width: 100%;
         height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 90px 20px 40px 20px !important; /* Espacio arriba para el menú y abajo para que respire */
+        
+        /* ¡LOS TRUCOS CLAVE PARA EL CELULAR! */
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start !important; /* Alinea las cosas desde arriba para que quepan todas */
+        overflow-y: auto !important; /* Activa el scroll con el dedo si el celular es pequeño */
+        -webkit-overflow-scrolling: touch; /* Hace que el scroll en iPhone y Android sea súper suave */
     }
+    
     .titulo-seccion {
         margin-bottom: 25px;
         margin-top: 20px;
