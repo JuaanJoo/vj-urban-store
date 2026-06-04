@@ -542,107 +542,123 @@ nav ul li:has(a[style*="display: none"]) {
     }
 }
 
-/* --- 3. ADAPTACIÓN ESTRICTA PARA CELULARES (Pantallas Pequeñas) --- */
+/* --- 3. ADAPTACIÓN ESTRICTA PARA CELULARES (PANTALLAS PEQUEÑAS - CORREGIDO) --- */
 @media (max-width: 576px) {
-    /* ENCABEZADO MÓVIL: Evita que los botones del menú se monten encima del logo */
+    
+    /* ENCABEZADO MÓVIL: Estructura fija y limpia para que nada se monte */
     header {
-        padding: 12px 15px;
-        flex-wrap: wrap; /* Si son muchos botones, se acomodan abajo limpiamente */
-        justify-content: center;
-        gap: 10px;
-    }
-    .logo {
-        font-size: 1.2rem;
-        width: 100%;
-        text-align: center; /* Centra el logo en celular para que se vea premium */
-    }
-    nav {
-        width: 100%;
-    }
-    nav ul {
-        justify-content: center;
-        gap: 12px;
-    }
-    nav ul li a {
-        font-size: 0.8rem; /* Letra un poco más pequeña para que no se corte */
-    }
-
-    /* BIENVENIDA MÓVIL: Mantiene tu estilo (mitad vertical y a la izquierda) pero adaptado */
-    .hero {
-        padding-left: 20px; /* Margen más pequeño en celular para aprovechar el espacio */
-        padding-right: 20px;
-        justify-content: center; /* Asegura el centrado vertical perfecto */
-        align-items: flex-start; /* Mantiene la información tirada a la izquierda */
-    }
-    .hero-content {
-        max-width: 100%;
-    }
-    .hero-content h1 {
-        font-size: 2.2rem; /* El título se encoge para que no rompa la pantalla */
-        line-height: 1.2;
-    }
-    .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
-    .btn-premium {
-        padding: 12px 30px;
-        font-size: 0.9rem;
-    }
-
-    /* PANTALLA DE CATEGORÍAS EN CELULAR */
-   /* PANTALLA DE CATEGORÍAS EN CELULAR (REPARADO) */
-    .categorias-seccion {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
+        position: fixed !important;
         top: 0;
         left: 0;
-        padding: 90px 20px 40px 20px !important; /* Espacio arriba para el menú y abajo para que respire */
-        
-        /* ¡LOS TRUCOS CLAVE PARA EL CELULAR! */
+        width: 100%;
+        padding: 10px 15px !important;
+        height: 60px; /* Alto fijo para controlar el espacio */
+        background: #0b0f19 !important;
         display: flex !important;
-        flex-direction: column;
-        justify-content: flex-start !important; /* Alinea las cosas desde arriba para que quepan todas */
-        overflow-y: auto !important; /* Activa el scroll con el dedo si el celular es pequeño */
-        -webkit-overflow-scrolling: touch; /* Hace que el scroll en iPhone y Android sea súper suave */
+        flex-direction: row !important; /* Fuerza a que el logo y el menú vayan en la misma línea */
+        justify-content: space-between !important;
+        align-items: center !important;
+        z-index: 1000 !important;
+    }
+    
+    .logo {
+        font-size: 1.1rem !important;
+        width: auto !important;
+        text-align: left !important;
+    }
+    
+    nav {
+        width: auto !important;
+    }
+    
+    nav ul {
+        gap: 10px !important;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem !important;
+        padding: 5px 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+
+    /* BIENVENIDA MÓVIL: Ocupa todo el espacio y se alinea con elegancia */
+    .hero {
+        padding: 80px 20px 20px 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        box-sizing: border-box !important;
+        height: 100vh !important;
+    }
+    
+    .hero-content {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* PANTALLA DE CATEGORÍAS EN CELULAR: Evita que el texto se pise con el menú */
+    .categorias-seccion {
+        position: fixed !important;
+        width: 100% !important;
+        height: 100vh !important;
+        top: 0;
+        left: 0;
+        /* Le damos 90px arriba para que el texto "Explora nuestro universo" empiece ABAJO del menú */
+        padding: 90px 20px 30px 20px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        overflow-y: auto !important; /* Permite deslizar con el dedo */
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box !important;
     }
     
     .titulo-seccion {
-        margin-bottom: 25px;
-        margin-top: 20px;
-    }
-    .titulo-seccion h2 {
-        font-size: 1.8rem !important;
-    }
-    .titulo-seccion p {
-        font-size: 0.9rem;
-    }
-
-    /* Cuadrícula de Categorías: 1 por fila para que las cartas se vean gigantes y nítidas */
-    .categorias-grid {
-        grid-template-columns: repeat(1, 1fr) !important;
-        gap: 15px;
-        padding: 0;
-    }
-    .categoria-card {
-        height: 160px; /* Más bajitas en celular para que el cliente las vea todas sin esfuerzo */
-        padding: 20px;
-    }
-
-    /* PANTALLAS DE PRODUCTOS EN CELULAR */
-    .pantalla-gorras, .pantalla-ropa, .pantalla-zapatos {
-        /* Margen superior extra para que el menú flotante no tape los títulos de los productos */
-        padding-top: 90px !important; 
-        padding-bottom: 140px !important;
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
     }
     
-    /* Cuadrícula de Productos: 1 por fila bien estilizada */
+    .titulo-seccion h2 {
+        font-size: 1.7rem !important;
+    }
+    
+    /* Cuadrícula de Categorías ajustada para que quepan las 3 completas */
+    .categorias-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 12px !important;
+        padding-bottom: 40px !important; /* Espacio al final del scroll */
+    }
+    
+    .categoria-card {
+        height: 130px !important; /* Un poco más bajas para que entren cómodas en la pantalla */
+        padding: 15px 20px !important;
+    }
+    
+    /* PANTALLAS DE PRODUCTOS EN CELULAR */
+    .pantalla-gorras, .pantalla-ropa, .pantalla-zapatos {
+        padding-top: 85px !important;
+        padding-bottom: 120px !important;
+    }
+    
     .productos-grid {
         grid-template-columns: repeat(1, 1fr) !important;
-        gap: 20px;
-        padding: 0 15px;
+        gap: 20px !important;
+        padding: 0 10px !important;
     }
+}
     .producto-card {
         border-radius: 12px;
     }
