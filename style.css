@@ -499,3 +499,153 @@ nav ul li:has(a[style*="display: none"]) {
     height: auto;      /* Se estiran libremente hacia abajo si metes más productos */
     overflow-y: auto;  /* ¡AQUÍ SE ACTIVA EL MOUSE! Permite el scroll vertical solo si el contenido es largo */
 }
+
+
+
+
+
+/* ==========================================================================
+   SISTEMA DE ADAPTACIÓN GLOBAL ULTRA-RESPONSIVE (V&J URBAN STORE)
+   ========================================================================== */
+
+/* --- 1. AJUSTES GENERALES PARA QUE TODO ENCAJE --- */
+* {
+    max-width: 100%; /* Evita que cualquier tarjeta o texto se salga de la pantalla por la derecha */
+}
+
+/* --- 2. ADAPTACIÓN PARA TABLETS Y COMPUTADORES PEQUEÑOS (Medios) --- */
+@media (max-width: 992px) {
+    /* El encabezado se comprime un poco para que quepa el menú */
+    header {
+        padding: 15px 4%;
+    }
+    .logo {
+        font-size: 1.4rem;
+    }
+    nav ul {
+        gap: 15px;
+    }
+
+    /* La bienvenida se ajusta para pantallas medianas */
+    .hero {
+        padding-left: 6%;
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    /* Las cuadrículas pasan de 4 columnas a 2 columnas */
+    .categorias-grid, .productos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+        padding: 0 4%;
+    }
+}
+
+/* --- 3. ADAPTACIÓN ESTRICTA PARA CELULARES (Pantallas Pequeñas) --- */
+@media (max-width: 576px) {
+    /* ENCABEZADO MÓVIL: Evita que los botones del menú se monten encima del logo */
+    header {
+        padding: 12px 15px;
+        flex-wrap: wrap; /* Si son muchos botones, se acomodan abajo limpiamente */
+        justify-content: center;
+        gap: 10px;
+    }
+    .logo {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center; /* Centra el logo en celular para que se vea premium */
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+    nav ul li a {
+        font-size: 0.8rem; /* Letra un poco más pequeña para que no se corte */
+    }
+
+    /* BIENVENIDA MÓVIL: Mantiene tu estilo (mitad vertical y a la izquierda) pero adaptado */
+    .hero {
+        padding-left: 20px; /* Margen más pequeño en celular para aprovechar el espacio */
+        padding-right: 20px;
+        justify-content: center; /* Asegura el centrado vertical perfecto */
+        align-items: flex-start; /* Mantiene la información tirada a la izquierda */
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem; /* El título se encoge para que no rompa la pantalla */
+        line-height: 1.2;
+    }
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    .btn-premium {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    /* PANTALLA DE CATEGORÍAS EN CELULAR */
+    .categorias-seccion {
+        padding: 80px 15px 20px 15px !important; /* Espacio arriba para que el header no la tape */
+        overflow-y: auto !important; /* ¡CLAVE! Si el celular es muy pequeño, permite scroll para ver las 3 categorías */
+        position: fixed;
+        height: 100vh;
+    }
+    .titulo-seccion {
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    .titulo-seccion h2 {
+        font-size: 1.8rem !important;
+    }
+    .titulo-seccion p {
+        font-size: 0.9rem;
+    }
+
+    /* Cuadrícula de Categorías: 1 por fila para que las cartas se vean gigantes y nítidas */
+    .categorias-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 15px;
+        padding: 0;
+    }
+    .categoria-card {
+        height: 160px; /* Más bajitas en celular para que el cliente las vea todas sin esfuerzo */
+        padding: 20px;
+    }
+
+    /* PANTALLAS DE PRODUCTOS EN CELULAR */
+    .pantalla-gorras, .pantalla-ropa, .pantalla-zapatos {
+        /* Margen superior extra para que el menú flotante no tape los títulos de los productos */
+        padding-top: 90px !important; 
+        padding-bottom: 140px !important;
+    }
+    
+    /* Cuadrícula de Productos: 1 por fila bien estilizada */
+    .productos-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    .producto-card {
+        border-radius: 12px;
+    }
+    .producto-imagen {
+        height: 240px; /* Altura ideal para la foto del producto en pantallas táctiles */
+    }
+    .producto-info {
+        padding: 15px;
+    }
+    .producto-info h3 {
+        font-size: 1rem;
+    }
+    .producto-info .precio {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+}
