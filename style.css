@@ -269,14 +269,14 @@ nav ul li a:hover {
 
 /*SISTEMA DE ANIMACIONES URBANAS (TRANSICIONES DE PANTALLA)*/
 
-.pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
+.pantalla-ropa, .pantalla-zapatos, .pantalla-gorras, .pantalla-ropa-interior {
     width: 100%;
     min-height: 100vh;
     position: relative;
     display: none;
-    padding-bottom: 160px; 
-    
+    padding-bottom: 160px;  
     box-sizing: border-box;
+    display: none;
 }
 
 .pantalla-activa {
@@ -315,6 +315,7 @@ nav ul li a:hover {
     text-transform: uppercase;
     font-size: 14px;
     transition: color 0.3s, transform 0.2s;
+    margin: 40px auto 20px auto !important;
 }
 
 .btn-volver:hover {
