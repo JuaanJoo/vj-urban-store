@@ -525,7 +525,7 @@ nav ul li:has(a[style*="display: none"]) {
         padding: 4px 5px !important;
     }
 
-    .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
+    .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras, .pantalla-ropa-interior {
         width: 100% !important;
         box-sizing: border-box !important;
     }
@@ -566,5 +566,19 @@ nav ul li:has(a[style*="display: none"]) {
 
     .pantalla-gorras {
         padding-top: 80px !important;
+        
+    }
+    .pantalla-gorras h2, .pantalla-gorras .titulo-seccion h2 {
+        margin-top: 20px !important;
+        line-height: 1.4 !important;
+    }
+
+    .pantalla-ropa-interior {
+        padding-top: 80px !important;
+        
+    }
+    .pantalla-ropa-interior h2, .pantalla-ropa-interior .titulo-seccion h2 {
+        margin-top: 20px !important;
+        line-height: 1.4 !important;
     }
 }
