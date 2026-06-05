@@ -508,7 +508,7 @@ nav ul li:has(a[style*="display: none"]) {
 @media (max-width: 576px) {
     
     header {
-        padding: 10px 5px !important;
+        padding: 10px 4px !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -517,14 +517,14 @@ nav ul li:has(a[style*="display: none"]) {
     header nav ul {
         display: flex !important;
         flex-direction: row !important;
-        gap: 4px !important;
+        gap: 2px !important;
         padding-left: 0 !important;
         margin: 0 !important;
     }
 
     header nav ul li a {
-        font-size: 0.72rem !important;
-        padding: 4px 5px !important;
+        font-size: 0.68rem !important;
+        padding: 4px 4px !important;
         white-space: nowrap !important;
     }
 
