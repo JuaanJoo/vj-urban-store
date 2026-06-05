@@ -528,10 +528,24 @@ nav ul li:has(a[style*="display: none"]) {
         padding: 4px 6px !important;
     }
 
-    /* Las pantallas ocupan el ancho del celular correctamente */
-    .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
-        width: 100% !important;
-        box-sizing: border-box !important;
+    /* Separación individual para que el menú no tape los textos en celular */
+    .categorias-seccion {
+        padding-top: 80px !important;
+    }
+
+    /* Le damos más espacio arriba a Ropa para que "Mucha variedad de ropa" baje y se vea completo */
+    .pantalla-ropa {
+        padding-top: 110px !important; 
+    }
+
+    /* Le damos más espacio arriba a Zapatos para que su texto superior también baje y se libre del menú */
+    .pantalla-zapatos {
+        padding-top: 110px !important;
+    }
+
+    /* Gorras se queda exactamente igual a como ya te gusta */
+    .pantalla-gorras {
+        padding-top: 80px !important;
     }
 
     /* En las categorías, las tarjetas se acomodan una debajo de otra de forma limpia */
