@@ -175,6 +175,7 @@ nav ul li a:hover {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding-top: 80px !important;
 }
 
 /* Detalle en Rojo Urbano para el título */
@@ -185,7 +186,8 @@ nav ul li a:hover {
 .titulo-seccion p {
     color: #666666;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 20px; 
+    line-height: 1.4;
 }
 
 /* REJILLA DE TARJETAS (GRID) */
