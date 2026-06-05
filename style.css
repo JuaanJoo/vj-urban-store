@@ -533,6 +533,19 @@ nav ul li:has(a[style*="display: none"]) {
         box-sizing: border-box !important;
     }
 
+    .categorias-seccion {
+        padding-top: 130px !important;    /* Empuja el título hacia abajo para que el menú negro no lo tape */
+        padding-bottom: 40px !important;  /* Le da aire abajo a la tarjeta de Ropa Interior para que no se moche */
+        min-height: 100vh !important;     /* Asegura que ocupe el alto de la pantalla */
+        box-sizing: border-box !important;
+        overflow-y: auto !important;      /* Permite deslizar hacia abajo si el celular es compacto */
+    }
+
+    .categorias-seccion .titulo-seccion h2 {
+        margin-top: 10px !important;
+        line-height: 1.3 !important;
+    }
+
     .categorias-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -542,7 +555,8 @@ nav ul li:has(a[style*="display: none"]) {
 
     .categoria-card {
         width: 100% !important;
-        height: 120px !important;
+        height: 110px !important;
+        padding-bottom: 20px !important;
     }
 
     .productos-grid {
