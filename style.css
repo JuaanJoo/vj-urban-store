@@ -508,7 +508,7 @@ nav ul li:has(a[style*="display: none"]) {
 @media (max-width: 576px) {
     
     header {
-        padding: 10px !important;
+        padding: 10px 5px !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
@@ -517,12 +517,15 @@ nav ul li:has(a[style*="display: none"]) {
     header nav ul {
         display: flex !important;
         flex-direction: row !important;
-        gap: 5px !important;
+        gap: 4px !important;
+        padding-left: 0 !important;
+        margin: 0 !important;
     }
 
     header nav ul li a {
-        font-size: 0.75rem !important;
+        font-size: 0.72rem !important;
         padding: 4px 5px !important;
+        white-space: nowrap !important;
     }
 
     .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras, .pantalla-ropa-interior {
