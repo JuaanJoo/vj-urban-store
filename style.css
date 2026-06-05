@@ -533,16 +533,21 @@ nav ul li:has(a[style*="display: none"]) {
         box-sizing: border-box !important;
     }
 
-    .categorias-seccion {
-        padding-top: 130px !important;    /* Empuja el título hacia abajo para que el menú negro no lo tape */
-        padding-bottom: 40px !important;  /* Le da aire abajo a la tarjeta de Ropa Interior para que no se moche */
-        min-height: 100vh !important;     /* Asegura que ocupe el alto de la pantalla */
+.categorias-seccion {
+        padding-top: 130px !important;    /* Deja el título libre de la barra negra superior */
+        padding-bottom: 80px !important;  /* ¡MÁS ESPACIO! Le da un colchón gigante abajo a Ropa Interior */
+        height: auto !important;          /* Quitamos el 100vh que volvía loco al iPhone */
+        min-height: auto !important;       /* Libera la restricción de altura */
+        overflow-y: visible !important;   /* Apaga el scroll interno de la caja para usar el scroll del celular */
         box-sizing: border-box !important;
-        overflow-y: auto !important;      /* Permite deslizar hacia abajo si el celular es compacto */
+    }
+
+.categorias-seccion .titulo-seccion {
+        margin-bottom: 25px !important;
     }
 
     .categorias-seccion .titulo-seccion h2 {
-        margin-top: 10px !important;
+        margin-top: 0 !important;
         line-height: 1.3 !important;
     }
 
@@ -551,6 +556,7 @@ nav ul li:has(a[style*="display: none"]) {
         flex-direction: column !important;
         gap: 15px !important;
         width: 100% !important;
+        padding-bottom: 30px !important; /* Espacio extra al final de las tarjetas */
     }
 
     .categoria-card {
