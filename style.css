@@ -543,110 +543,116 @@ nav ul li:has(a[style*="display: none"]) {
 }
 
 /* ==========================================================================
-   CORRECCIÓN QUIRÚRGICA PARA CELULARES - ELIMINA TRANSPARENCIAS Y REFLEJOS
+   REPARACIÓN DE POSICIONES FLOTANTES Y FANTASMAS EN CELULARES
    ========================================================================== */
 @media (max-width: 576px) {
     
-    /* ENCABEZADO: Forzamos un bloque negro completamente sólido y opaco */
+    /* 1. MENÚ SUPERIOR: Forzamos un bloque 100% opaco y destruimos duplicados */
     header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
         height: 65px !important;
-        
-        /* Capa de color ultra sólida para tapar lo que haya detrás */
-        background-color: #0b0f19 !important; 
-        background-image: none !important; /* Elimina cualquier reflejo o fondo heredado */
-        
+        background-color: #0b0f19 !important; /* Color oscuro sólido e impermeable */
+        background-image: none !important;
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 0 15px !important;
-        z-index: 99999 !important; /* Se mantiene al frente de todo */
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra para separar del fondo */
+        z-index: 99999 !important; /* Pasa al frente de cualquier logo fantasma */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
     }
 
-    /* Forzamos al logo del menú a estar limpio a la izquierda */
-    .logo {
+    /* Forzamos al logo del menú a no duplicarse ni flotar */
+    header .logo {
         font-size: 1.1rem !important;
         position: relative !important;
         display: block !important;
         background: transparent !important;
         margin: 0 !important;
-        padding: 0 !important;
+        z-index: 100000 !important;
     }
 
-    /* Contenedor de los botones */
-    nav {
+    /* Contenedor compacto para los botones en una sola línea horizontal */
+    header nav {
         width: auto !important;
-        background: transparent !important;
     }
 
-    /* Lista de botones en una sola fila horizontal compacta */
-    nav ul {
+    header nav ul {
         display: flex !important;
-        flex-direction: row !important; 
+        flex-direction: row !important;
         gap: 6px !important;
-        background: transparent !important;
-        padding: 0 !important;
+        list-style: none !important;
         margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* Estilo de los botones individuales en el celular */
-    nav ul li a {
+    header nav ul li a {
         font-size: 0.75rem !important;
         padding: 6px 8px !important;
-        background: rgba(255, 255, 255, 0.08) !important; /* Un gris muy sutil */
+        background: rgba(255, 255, 255, 0.1) !important; /* Fondo gris sutil para los botones */
         border-radius: 4px !important;
         color: #fff !important;
-        display: inline-block !important;
+        text-decoration: none !important;
+        white-space: nowrap !important;
     }
 
-    /* Separación para que la bienvenida empiece justo DEBAJO del menú sólido */
+    /* 2. BIENVENIDA (HERO): Aquí destruimos el efecto fantasma/reflejo */
     .hero {
-        padding-top: 85px !important;
+        position: relative !important; /* ¡CAMBIO CLAVE! Evita que flote detrás del menú */
         height: 100vh !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Ajuste de categorías para que no choquen con el menú */
-    .categorias-seccion {
-        position: fixed !important;
+        width: 100% !important;
+        padding: 90px 20px 20px 20px !important; /* Margen superior para que el menú no tape las letras */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
         top: 0 !important;
         left: 0 !important;
+    }
+
+    /* 3. CATEGORÍAS Y SECCIONES: Desbloqueo de scroll real con el dedo */
+    .categorias-seccion {
+        position: relative !important; /* Cambiamos a relativo para que el celular no monte pantallas */
         width: 100% !important;
-        height: 100vh !important;
-        padding: 85px 20px 20px 20px !important;
+        height: auto !important; /* Permite que el contenido defina la altura */
+        min-height: 100vh !important;
+        padding: 90px 20px 40px 20px !important;
         background-color: #0b0f19 !important;
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch;
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-start !important;
     }
 
+    /* Forzamos las tarjetas a alinearse de arriba a abajo de manera limpia */
     .categorias-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 12px !important;
+        gap: 15px !important;
         width: 100% !important;
-        padding-bottom: 40px !important;
     }
 
     .categoria-card {
         width: 100% !important;
-        height: 110px !important;
+        height: 100px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
-    /* Ajuste de productos */
-    .pantalla-gorras, .pantalla-ropa, .pantalla-zapatos {
-        padding-top: 85px !important;
+    /* 4. PRODUCTOS: Evitamos que se monten encima del header */
+    .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
+        position: relative !important;
+        padding-top: 90px !important;
+        padding-bottom: 80px !important;
     }
 
     .productos-grid {
-        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-columns: repeat(1, 1fr) !important; /* Un producto por fila en celular */
         gap: 20px !important;
+        padding: 0 10px !important;
     }
 }
