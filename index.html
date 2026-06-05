@@ -2,7 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- ¡ESTA ES LA LÍNEA QUE LE FALTA A TU ARCHIVO! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V&J URBAN STORE</title>
     <link rel="stylesheet" href="style.css">
@@ -333,31 +332,6 @@
             }
         }
     </script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Ejecutar solo si es celular
-        if (window.innerWidth <= 576) {
-            // 1. Ocultamos el header inmediatamente al cargar la bienvenida en celular
-            const headerCelular = document.querySelector('header');
-            if (headerCelular) {
-                headerCelular.style.setProperty('display', 'none', 'important');
-            }
-
-            // 2. Buscamos el botón de la bienvenida por su texto "VER CATÁLOGO"
-            const botones = document.querySelectorAll('button, a');
-            botones.forEach(boton => {
-                if (boton.textContent.trim().toUpperCase() === 'VER CATÁLOGO') {
-                    // Escuchamos el clic en el celular de forma independiente
-                    boton.addEventListener('click', function() {
-                        if (headerCelular) {
-                            // Forzamos al menú a aparecer solo en el celular al cambiar de pantalla
-                            headerCelular.style.setProperty('display', 'flex', 'important');
-                        }
-                    });
-                }
-            });
-        }
-    });
-</script>
+    
 </body>
 </html>    
