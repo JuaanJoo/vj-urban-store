@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V&J URBAN STORE</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Conexión anticipada a los servidores de fuentes -->
+    
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Precarga la fuente Poppins antes de que el CSS se ejecute -->
+
+
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap">
-<!-- Cambiar el icono de la pestaña del navegador -->
+
+
 <link rel="icon" type="image/png" href="img/logo_pestaña.png">
 </head>
 <body>
+    
+    
     <!-- ENCABEZADO DE LA TIENDA -->
      <header>
         <div class="logo">
@@ -32,63 +37,50 @@
     </ul>
 </nav>
      </header>
+     
+     
      <!-- BANNER DE BIENVENIDA PREMIUM -->
     <section class="hero pantalla-activa">
-        <div class="hero-overlay"></div> <!-- Capa oscura para que el texto se lea perfecto -->
+        <div class="hero-overlay"></div> 
         <div class="hero-card">
             <h2>LLEVA TU ESTILO<br>AL SIGUIENTE NIVEL</h2>
             <p>Ropa, gorras, zapatos y accesorios para todos los estilos. Diseños únicos para gente auténtica.</p>
             <a href="#" class="btn-catalogo" onclick="irAPantalla('.hero', '.categorias-seccion', event)">Ver Catálogo</a>
         </div>
     </section>
-    <!-- SECCIÓN DE CATEGORÍAS PREMIUM -->
-    <section class="categorias-seccion">
-        <div class="titulo-seccion">
-            <h2>Explora Nuestro <span>Universo</span></h2>
-            <p>Encuentra las mejores prendas seleccionadas para cada estilo.</p>
+    
+    
+<section class="categorias-seccion">
+    <div class="titulo-seccion">
+        <h2>EXPLORA NUESTRO <span>UNIVERSO</span></h2>
+        <p>Encuentra las mejores prendas seleccionadas para cada estilo.</p>
+    </div>
+    <div class="categorias-grid">
+        
+        <a href="#" class="categoria-card" onclick="irAPantalla('.categorias-seccion', '.pantalla-ropa', event)">
+            <h3>ROPA</h3>
+            <span>VER MÁS</span>
+        </a>
+        
+        <a href="#" class="categoria-card" onclick="irAPantalla('.categorias-seccion', '.pantalla-zapatos', event)">
+            <h3>ZAPATOS</h3>
+            <span>VER MÁS</span>
+        </a>
+        
+        <a href="#" class="categoria-card" onclick="irAPantalla('.categorias-seccion', '.pantalla-gorras', event)">
+            <h3>GORRAS</h3>
+            <span>VER MÁS</span>
+        </a>
 
-<div class="categorias-grid">
-            <!-- Categoría 1: Ropa -->
-            <div class="categoria-card">
-                <div class="categoria-bg"></div>
-                <div class="categoria-info">
-                    <h3>Ropa</h3>
-                    <!-- Conectamos con la pantalla de ropa -->
-                    <a href="#" class="btn-categoria" onclick="irAPantalla('.categorias-seccion', '.pantalla-ropa', event)">Ver Más</a>
-                </div>
-            </div>
+        <a href="#" class="categoria-card" onclick="irAPantalla('.categorias-seccion', '.pantalla-ropa-interior', event)">
+            <h3>ROPA INTERIOR</h3>
+            <span>VER MÁS</span>
+        </a>
 
-            <!-- Categoría 2: Zapatos -->
-            <div class="categoria-card">
-                <div class="categoria-bg"></div>
-                <div class="categoria-info">
-                    <h3>Zapatos</h3>
-                    <!-- Conectamos con la pantalla de zapatos -->
-                    <a href="#" class="btn-categoria" onclick="irAPantalla('.categorias-seccion', '.pantalla-zapatos', event)">Ver Más</a>
-                </div>
-            </div>
-
-            <!-- Categoría 3: Gorras -->
-            <div class="categoria-card">
-                <div class="categoria-bg"></div>
-                <div class="categoria-info">
-                    <h3>Gorras</h3>
-                    <!-- Conectamos con la pantalla de Gorras -->
-                    <a href="#" class="btn-categoria" onclick="irAPantalla('.categorias-seccion', '.pantalla-gorras', event)">Ver Más</a>
-                </div>
-            </div>
-
-            <!-- Categoría 4: Ropa Interior -->
-            <div class="categoria-card">
-                <div class="categoria-bg"></div>
-                <div class="categoria-info">
-                    <h3>Ropa Interior</h3>
-                    <!-- ¡AQUÍ ESTÁ EL CAMBIO! Si quieres que vaya a la misma de ropa, asegúrate de que use '.pantalla-ropa' y no otra clase -->
-                    <a href="#" class="btn-categoria" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa', event)">Ver Más</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
+    
+    
     <!-- PANTALLA DE PRODUCTOS: GORRAS -->
     <section class="pantalla-gorras categorias-seccion" style="background-color: #0b0f19; color: #fff;">
         
@@ -145,12 +137,13 @@
 
         </div>
 
-<!-- Busca esta línea al final de cada pantalla de producto en tu index.html y asegúrate de que tenga el margin-top: 60px; -->
-<div style="text-align: center; margin-top: 60px;">
+
     <a href="#" class="btn-volver" onclick="irAPantalla('.pantalla-activa', '.categorias-seccion', event)">← Ver Otras Categorías</a>
 </div>
     </section>
 
+    
+    
     <!-- PANTALLA DE PRODUCTOS: ZAPATOS -->
     <section class="pantalla-zapatos" style="background-color: #0b0f19; color: #fff;">
         <div style="padding-top: 120px; width: 100%;">
@@ -210,14 +203,16 @@
                 </div>
             </div>
 
-<!-- Busca esta línea al final de cada pantalla de producto en tu index.html y asegúrate de que tenga el margin-top: 60px; -->
+
 <div style="text-align: center; margin-top: 60px;">
     <a href="#" class="btn-volver" onclick="irAPantalla('.pantalla-activa', '.categorias-seccion', event)">← Ver Otras Categorías</a>
 </div>
         </div>
     </section>
 
-    <!-- PANTALLA DE PRODUCTOS: ROPA EXTERIOR -->
+    
+    
+    <!-- PANTALLA DE PRODUCTOS: ROPA-->
     <section class="pantalla-ropa" style="background-color: #0b0f19; color: #fff;">
         <div style="padding-top: 120px; width: 100%;">
             
@@ -276,12 +271,14 @@
                 </div>
             </div>
 
-<!-- Busca esta línea al final de cada pantalla de producto en tu index.html y asegúrate de que tenga el margin-top: 60px; -->
+
 <div style="text-align: center; margin-top: 60px;">
     <a href="#" class="btn-volver" onclick="irAPantalla('.pantalla-activa', '.categorias-seccion', event)">← Ver Otras Categorías</a>
 </div>
         </div>
     </section>
+
+
 <script>
         function irAPantalla(pantallaActualSelector, pantallaNuevaSelector, event) {
             if(event) event.preventDefault();
@@ -296,7 +293,6 @@
                 nueva.classList.add('pantalla-activa');
                 
                 // ¡OPTIMIZACIÓN ULTRA RÁPIDA! 
-                // Sube al tope de la página en 0 milisegundos, ideal para conexiones móviles
                 window.scrollTo(0, 0);
                 
                 // Captura de botones del menú
@@ -310,7 +306,7 @@
                 const todosLosBotones = [btnInicio, btnRopa, btnZapatos, btnGorras, btnAccesorios];
                 todosLosBotones.forEach(btn => { if(btn) btn.style.display = 'inline-block'; });
                 
-                // Lógica del menú dinámico
+                // Menú dinámico
                 if (pantallaNuevaSelector === '.hero') {
                     menuSuperior.style.display = 'none';
                 } else if (pantallaNuevaSelector === '.categorias-seccion') {

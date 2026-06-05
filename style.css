@@ -1,6 +1,5 @@
-/* CONFIGURACIÓN BÁSICA */
 html {
-    scroll-behavior: smooth; /* ¡Esta línea hace la magia del deslizamiento suave! */
+    scroll-behavior: smooth; 
 }
 
 * {
@@ -11,8 +10,8 @@ html {
 }
 
 body {
-    background-color: #ffffff; /* Fondo Blanco */
-    color: #1a1a1a; /* Texto Negro Mate */
+    background-color: #ffffff;
+    color: #1a1a1a;
 }
 
 /* ESTILO DEL ENCABEZADO */
@@ -35,7 +34,6 @@ header {
     font-size: 24px;
 }
 
-/* Aquí aplicamos el Rojo Urbano en el detalle del logo */
 .logo h1 span {
     color: #ff2a2a; 
 }
@@ -54,7 +52,7 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-/* Cuando el cliente pasa el mouse por encima, cambia al Rojo Urbano */
+
 nav ul li a:hover {
     color: #ff2a2a;
 }
@@ -62,14 +60,12 @@ nav ul li a:hover {
 /* NUEVO BANNER PREMIUM */
 .hero {
     position: relative;
-    height: 80vh; /* Ocupa el 80% de la pantalla */
-    background-color: #0b0f19; /* Fondo oscuro urbano por defecto */
-    /* CUANDO TENGAN LA FOTO, BORRAN LA LÍNEA DE ABAJO Y QUITAN LOS CONECTORES /* */
-    /* background-image: url('foto-juan-y-vale.jpg'); */
+    height: 80vh;
+    background-color: #0b0f19;
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: flex-start; /* Alinea la tarjeta a la izquierda como en la imagen */
+    justify-content: flex-start; 
     align-items: center;
     padding: 0 8%;
     overflow: hidden;
@@ -86,19 +82,19 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-/* Tarjeta flotante con efecto vidrio transparente (Glassmorphism) */
+/* Tarjeta flotante con efecto vidrio transparente */
 .hero-card {
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.06); 
-    backdrop-filter: blur(12px); /* Desenfoca lo que está atrás */
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 50px 40px;
     border-radius: 15px;
     max-width: 550px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    animation: aparecer 1s ease-out; /* Animación sutil al cargar la página */
+    animation: aparecer 1s ease-out;
 }
 
 .hero-card h2 {
@@ -121,7 +117,7 @@ nav ul li a:hover {
 /* BOTÓN PREMIUM ROJO URBANO CONTORNEADO */
 .btn-catalogo {
     display: inline-block;
-    background: linear-gradient(180deg, #ff2a2a 0%, #b81414 100%); /* Degradado 3D */
+    background: linear-gradient(180deg, #ff2a2a 0%, #b81414 100%);
     color: #ffffff;
     padding: 14px 35px;
     text-decoration: none;
@@ -138,7 +134,7 @@ nav ul li a:hover {
 .btn-catalogo:hover {
     background: linear-gradient(180deg, #ff4545 0%, #d61f1f 100%);
     box-shadow: 0 8px 25px rgba(255, 42, 42, 0.6);
-    transform: translateY(-3px); /* Efecto de que flota un poco hacia arriba */
+    transform: translateY(-3px); 
 }
 
 .btn-catalogo:active {
@@ -159,7 +155,6 @@ nav ul li a:hover {
 
 /* SECCIÓN CATEGORÍAS */
 .categorias-seccion {
-    /* El primer número (140px) es el espacio de arriba. Si está muy bajo, súbelo a 140px o 160px */
     padding: 140px 8% 80px 8%; 
     background-color: #ffffff;
     display: flex;
@@ -167,12 +162,11 @@ nav ul li a:hover {
     justify-content: center;
 }
 
-/* TÍTULO DE LA SECCIÓN (Para que flote por encima) */
 .titulo-seccion {
     text-align: center;
     margin-bottom: 50px;
-    position: relative; /* ¡Esta línea es nueva e importante! */
-    z-index: 5;          /* ¡Ponemos el título en una capa más alta! */
+    position: relative; 
+    z-index: 5;          
 }
 
 .titulo-seccion h2 {
@@ -199,8 +193,6 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    
-    /* ¡ESTA LÍNEA CENTRA LAS TARJETAS EN LA PANTALLA! */
     justify-content: center; 
 }
 
@@ -210,7 +202,7 @@ nav ul li a:hover {
     height: 350px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #0b0f19; /* Fondo oscuro premium por defecto */
+    background-color: #0b0f19; 
     display: flex;
     align-items: flex-end;
     padding: 30px;
@@ -220,7 +212,6 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-/* Fondo simulado (pueden ponerle fotos después) */
 .categoria-bg {
     position: absolute;
     top: 0;
@@ -255,64 +246,49 @@ nav ul li a:hover {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
-    border-bottom: 2px solid #ff2a2a; /* Línea roja urbana */
+    border-bottom: 2px solid #ff2a2a;
     padding-bottom: 4px;
     transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
-/* TARJETA INDIVIDUAL (Ajuste del z-index en hover) */
 .categoria-card:hover {
     transform: translateY(-10px);
     border-color: #ff2a2a;
     box-shadow: 0 15px 30px rgba(255, 42, 42, 0.2);
-    
-    /* ¡Quitamos cualquier z-index alto que tuviera antes aquí! */
-    z-index: 1; /* Esto asegura que flote, pero no tape el título principal */
+    z-index: 1; 
 }
 
-/* El fondo se agranda un poco dando efecto de zoom */
 .categoria-card:hover .categoria-bg {
     transform: scale(1.1);
 }
-
-/* El botón se mueve sutilmente a la derecha */
 .categoria-card:hover .btn-categoria {
     color: #ff2a2a;
     padding-left: 5px;
 }
 
 
-/* ==========================================================================
-   SISTEMA DE ANIMACIONES URBANAS (TRANSICIONES DE PANTALLA)
-   ========================================================================== */
+/*SISTEMA DE ANIMACIONES URBANAS (TRANSICIONES DE PANTALLA)*/
 
-/* B. Pantallas de Productos: Se estiran hacia abajo (Activan el mouse) */
 .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
     width: 100%;
     min-height: 100vh;
-    position: relative; /* Fluyen libremente hacia abajo */
+    position: relative;
     display: none;
-    
-    /* ¡AQUÍ ESTÁ LA SOLUCIÓN! */
-    /* Subimos el espacio de 100px a 160px para que el botón jamás se corte abajo */
     padding-bottom: 160px; 
     
     box-sizing: border-box;
 }
 
-/* La pantalla activa rompe el candado y entra con toda la fuerza */
 .pantalla-activa {
     display: flex !important; 
     animation: entradaUrbana 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
     opacity: 1;
-    transform: translateY(0) scale(1); /* Sube a su posición original con tamaño real */
+    transform: translateY(0) scale(1);
     z-index: 2;
-    /* ¡AQUÍ ESTÁ EL TRUCO ANTILAG! */
-    will-change: transform, opacity; /* Le avisa al navegador qué va a cambiar para que reserve memoria gráfica */
-    transform: translateZ(0); /* Activa la aceleración por hardware en celulares */
+    will-change: transform, opacity; 
+    transform: translateZ(0); 
 }
 
-/* Animación de entrada para los textos y elementos internos (Efecto Retardo) */
 .pantalla-activa .titulo-seccion,
 .pantalla-activa .categorias-grid,
 .pantalla-activa .categoria-card {
@@ -322,7 +298,7 @@ nav ul li a:hover {
 @keyframes entradaContenidoUrbano {
     from {
         opacity: 0;
-        transform: translateY(40px); /* Los textos suben desde más abajo */
+        transform: translateY(40px); 
     }
     to {
         opacity: 1;
@@ -333,7 +309,7 @@ nav ul li a:hover {
 .btn-volver {
     display: inline-block;
     margin-top: 15px;
-    color: #ff2a2a; /* Nuestro Rojo Urbano */
+    color: #ff2a2a;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -343,21 +319,60 @@ nav ul li a:hover {
 
 .btn-volver:hover {
     color: #1a1a1a;
-    transform: translateX(-5px); /* Se mueve un poco a la izquierda al pasar el mouse */
+    transform: translateX(-5px); 
 }
 
-/* Corrección para que los elementos ocultos del menú no ocupen espacio */
 nav ul li:has(a[style*="display: none"]) {
     display: none;
 }
 
-/* ==========================================================================
-   ESTILOS DE LA GALERÍA DE PRODUCTOS (URBAN STYLE)
-   ========================================================================== */
+/* TARJETAS PREPARADAS PARA IMÁGENES DE FONDO (TEXTOS ABAJO) */
+.categoria-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px !important;  
+    text-decoration: none !important;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+    
+    /* PROPIEDADES LISTAS PARA CUANDO LE METAS LAS IMÁGENES: */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
 
-/* ==========================================================================
-   CUADRÍCULA DE PRODUCTOS INTELIGENTE (PC Y CELULARES)
-   ========================================================================== */
+.categoria-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(11, 15, 25, 0.9) 0%, rgba(11, 15, 25, 0) 60%);
+    z-index: 1;
+}
+
+.categoria-card h3, .categoria-card span {
+    position: relative;
+    z-index: 2;
+}
+
+.categoria-card h3 {
+    color: #ffffff !important;
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+
+.categoria-card span {
+    color: #ff0000 !important;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
+/* CUADRÍCULA DE PRODUCTOS INTELIGENTE (PC Y CELULARES)*/
 
 /* Contenedor de los productos */
 .productos-grid {
@@ -368,46 +383,36 @@ nav ul li:has(a[style*="display: none"]) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
-    
-    /* ¡ESTA LÍNEA ES LA SOLUCIÓN! */
-    /* Le da 60px de espacio libre arriba para que el menú no tape nada */
     padding-top: 60px; 
 }
 
-/* 2. ADAPTACIÓN PARA TABLETS (Pantallas medianas) */
 @media (max-width: 992px) {
     .productos-grid {
-        grid-template-columns: repeat(2, 1fr); /* Se acomoda en 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
     }
 }
 
-/* 3. ADAPTACIÓN PARA CELULARES (Pantallas pequeñas) */
 @media (max-width: 576px) {
     .productos-grid {
-        /* Aquí tienes dos opciones visuales brutales para el flow de la tienda: */
-        grid-template-columns: repeat(1, 1fr); /* Opcional: cambia a 'repeat(2, 1fr)' si prefieres 2 gorras por fila */
+        grid-template-columns: repeat(1, 1fr); 
         gap: 25px;
-        padding: 0 6%; /* Le da un margen elegante a los lados en el teléfono */
+        padding: 0 6%; 
     }
     
-    /* Ajustamos el tamaño de la foto en el celular para que no ocupe toda la pantalla */
     .producto-imagen {
         height: 320px; 
     }
     
-    /* El título de la colección se adapta para que no se vea gigante en el celular */
     .titulo-seccion h2 {
         font-size: 2rem !important;
     }
     
-    /* Le damos un poco más de espacio arriba al contenedor del celular por el menú móvil */
     .pantalla-gorras > div {
         padding-top: 100px !important;
     }
 }
 
-/* Tarjeta individual del producto */
 .producto-card {
     background: #11141e;
     border-radius: 16px;
@@ -419,10 +424,9 @@ nav ul li:has(a[style*="display: none"]) {
 
 .producto-card:hover {
     transform: translateY(-8px);
-    border-color: #ff2a2a; /* El color rojo característico de tu marca */
+    border-color: #ff2a2a; 
 }
 
-/* Espacio para la foto del producto */
 .producto-imagen {
     width: 100%;
     height: 280px;
@@ -441,7 +445,6 @@ nav ul li:has(a[style*="display: none"]) {
     letter-spacing: 1px;
 }
 
-/* Información abajo de la foto */
 .producto-info {
     padding: 25px;
     text-align: center;
@@ -454,7 +457,6 @@ nav ul li:has(a[style*="display: none"]) {
     font-weight: 600;
 }
 
-/* Precio destacado */
 .producto-info .precio {
     font-size: 1.4rem;
     color: #ff2a2a;
@@ -462,7 +464,6 @@ nav ul li:has(a[style*="display: none"]) {
     margin-bottom: 20px;
 }
 
-/* Botón Añadir al carrito */
 .btn-carrito {
     background: transparent;
     color: #fff;
@@ -483,33 +484,28 @@ nav ul li:has(a[style*="display: none"]) {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* 1. BIENVENIDA Y CATEGORÍAS: Bloqueadas */
 .hero, .categorias-seccion {
     display: none; 
     width: 100%;
-    height: 100vh;    /* Ocupan exactamente el tamaño de la pantalla visual */
-    overflow: hidden; /* ¡AQUÍ SE CONGELA EL MOUSE! Evita que aparezca cualquier barra de scroll */
+    height: 100vh;    
+    overflow: hidden;
 }
 
-/* 2. PANTALLAS DE PRODUCTOS: Activadas */
 .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
     display: none; 
     width: 100%;
-    min-height: 100vh; /* Como mínimo miden el alto de la pantalla */
-    height: auto;      /* Se estiran libremente hacia abajo si metes más productos */
-    overflow-y: auto;  /* ¡AQUÍ SE ACTIVA EL MOUSE! Permite el scroll vertical solo si el contenido es largo */
+    min-height: 100vh; 
+    height: auto;     
+    overflow-y: auto;  
 }
 
 
 
 
 
-/* ==========================================================================
-   ADAPTACIÓN GENERAL Y ARREGLO DE TEXTOS MOCHADOS EN CELULARES
-   ========================================================================== */
+/* ADAPTACIÓN GENERAL Y ARREGLO DE TEXTOS MOCHADOS EN CELULARES*/
 @media (max-width: 576px) {
     
-    /* 1. MENÚ SUPERIOR: Se adapta al ancho del celular sin romperse */
     header {
         padding: 10px !important;
         flex-direction: row !important;
@@ -528,13 +524,11 @@ nav ul li:has(a[style*="display: none"]) {
         padding: 4px 6px !important;
     }
 
-    /* 2. ESTRUCTURA: Las pantallas ocupan el ancho del celular correctamente */
     .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* 3. CATEGORÍAS: Las tarjetas se acomodan una debajo de otra de forma limpia */
     .categorias-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -547,18 +541,12 @@ nav ul li:has(a[style*="display: none"]) {
         height: 120px !important;
     }
 
-    /* 4. PRODUCTOS: Se muestra un producto por fila para que quepan bien */
     .productos-grid {
         grid-template-columns: repeat(1, 1fr) !important;
         gap: 20px !important;
         padding: 0 15px !important;
     }
 
-    /* ==========================================================================
-       CORRECCIÓN QUIRÚRGICA: EMPUJE DE TÍTULOS DEBAJO DEL HEADER
-       ========================================================================== */
-    
-    /* Ajuste para Ropa: Más espacio arriba y margen directo al h2 para que no se moche */
     .pantalla-ropa {
         padding-top: 140px !important; 
     }
@@ -567,7 +555,6 @@ nav ul li:has(a[style*="display: none"]) {
         line-height: 1.4 !important;
     }
 
-    /* Ajuste para Zapatos: Mismo empuje para rescatar el texto del menú */
     .pantalla-zapatos {
         padding-top: 140px !important;
     }
@@ -576,7 +563,6 @@ nav ul li:has(a[style*="display: none"]) {
         line-height: 1.4 !important;
     }
 
-    /* Gorras se queda tal cual a como ya te funciona perfecto */
     .pantalla-gorras {
         padding-top: 80px !important;
     }
