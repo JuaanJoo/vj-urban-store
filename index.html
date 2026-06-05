@@ -33,7 +33,7 @@
         <li><a href="#" class="btn-menu-ropa" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa', event)">Ropa</a></li>
         <li><a href="#" class="btn-menu-zapatos" onclick="irAPantalla('.pantalla-activa', '.pantalla-zapatos', event)">Zapatos</a></li>
         <li><a href="#" class="btn-menu-gorras" onclick="irAPantalla('.pantalla-activa', '.pantalla-gorras', event)">Gorras</a></li>
-        <li><a href="#" class="btn-menu-accesorios" onclick="irAPantalla('.pantalla-activa', '.categorias-seccion', event)">Accesorios</a></li>
+        <li><a href="#" class="btn-menu-ropa-interior" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa-interior', event)">Ropa Interior</a></li>
     </ul>
 </nav>
      </header>
@@ -366,10 +366,10 @@
                 const btnRopa = document.querySelector('.btn-menu-ropa');
                 const btnZapatos = document.querySelector('.btn-menu-zapatos');
                 const btnGorras = document.querySelector('.btn-menu-gorras');
-                const btnAccesorios = document.querySelector('.btn-menu-accesorios');
+                const btnRopaInterior = document.querySelector('.btn-menu-ropa-interior');
                 
                 // Resetear visibilidad de botones
-                const todosLosBotones = [btnInicio, btnRopa, btnZapatos, btnGorras, btnAccesorios];
+                const todosLosBotones = [btnInicio, btnRopa, btnZapatos, btnGorras, btnRopaInterior];
                 todosLosBotones.forEach(btn => { if(btn) btn.style.display = 'inline-block'; });
                 
                 // Menú dinámico
@@ -380,7 +380,7 @@
                     if(btnRopa) btnRopa.style.display = 'none';
                     if(btnZapatos) btnZapatos.style.display = 'none';
                     if(btnGorras) btnGorras.style.display = 'none';
-                    if(btnAccesorios) btnAccesorios.style.display = 'none';
+                    if(btnRopaInterior) btnRopaInterior.style.display = 'none';
                 } else if (pantallaNuevaSelector === '.pantalla-gorras') {
                     menuSuperior.style.display = 'flex';
                     if(btnGorras) btnGorras.style.display = 'none';
@@ -390,6 +390,9 @@
                 } else if (pantallaNuevaSelector === '.pantalla-ropa') {
                     menuSuperior.style.display = 'flex';
                     if(btnRopa) btnRopa.style.display = 'none';
+                } else if (pantallaNuevaSelector === '.pantalla-ropa-interior') {
+                    menuSuperior.style.display = 'flex';
+                    if(btnRopaInterior) btnRopaInterior.style.display = 'none';
                 }
             }
         }
