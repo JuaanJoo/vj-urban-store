@@ -547,24 +547,22 @@ nav ul li:has(a[style*="display: none"]) {
    ========================================================================== */
 @media (max-width: 576px) {
     
-    /* 1. MENÚ SUPERIOR: Forzamos un bloque 100% opaco y destruimos duplicados */
+/* ENCABEZADO EN CELULAR: Oculto por defecto en la bienvenida */
     header {
+        display: none !important; /* Lo escondemos por completo al iniciar */
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
         width: 100% !important;
         height: 65px !important;
-        background-color: #0b0f19 !important; /* Color oscuro sólido e impermeable */
+        background-color: #0b0f19 !important; 
         background-image: none !important;
-        display: flex !important;
-        flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
         padding: 0 15px !important;
-        z-index: 99999 !important; /* Pasa al frente de cualquier logo fantasma */
+        z-index: 99999 !important;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6) !important;
     }
-
     /* Forzamos al logo del menú a no duplicarse ni flotar */
     header .logo {
         font-size: 1.1rem !important;
