@@ -505,11 +505,11 @@ nav ul li:has(a[style*="display: none"]) {
 
 
 /* ==========================================================================
-   ADAPTACIÓN AUTOMÁTICA PARA CELULARES (RESPETA EL COMPORTAMIENTO DE PC)
+   ADAPTACIÓN GENERAL Y ARREGLO DE TEXTOS MOCHADOS EN CELULARES
    ========================================================================== */
 @media (max-width: 576px) {
     
-    /* El menú superior se adapta al ancho del celular sin romperse */
+    /* 1. MENÚ SUPERIOR: Se adapta al ancho del celular sin romperse */
     header {
         padding: 10px !important;
         flex-direction: row !important;
@@ -528,27 +528,13 @@ nav ul li:has(a[style*="display: none"]) {
         padding: 4px 6px !important;
     }
 
-    /* Separación individual para que el menú no tape los textos en celular */
-    .categorias-seccion {
-        padding-top: 80px !important;
+    /* 2. ESTRUCTURA: Las pantallas ocupan el ancho del celular correctamente */
+    .hero, .categorias-seccion, .pantalla-ropa, .pantalla-zapatos, .pantalla-gorras {
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Le damos más espacio arriba a Ropa para que "Mucha variedad de ropa" baje y se vea completo */
-    .pantalla-ropa {
-        padding-top: 110px !important; 
-    }
-
-    /* Le damos más espacio arriba a Zapatos para que su texto superior también baje y se libre del menú */
-    .pantalla-zapatos {
-        padding-top: 110px !important;
-    }
-
-    /* Gorras se queda exactamente igual a como ya te gusta */
-    .pantalla-gorras {
-        padding-top: 80px !important;
-    }
-
-    /* En las categorías, las tarjetas se acomodan una debajo de otra de forma limpia */
+    /* 3. CATEGORÍAS: Las tarjetas se acomodan una debajo de otra de forma limpia */
     .categorias-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -558,13 +544,40 @@ nav ul li:has(a[style*="display: none"]) {
 
     .categoria-card {
         width: 100% !important;
-        height: 120px !important; /* Altura cómoda para ver en celular */
+        height: 120px !important;
     }
 
-    /* En las pantallas de productos, se muestra un producto por fila para que quepa bien */
+    /* 4. PRODUCTOS: Se muestra un producto por fila para que quepan bien */
     .productos-grid {
         grid-template-columns: repeat(1, 1fr) !important;
         gap: 20px !important;
         padding: 0 15px !important;
+    }
+
+    /* ==========================================================================
+       CORRECCIÓN QUIRÚRGICA: EMPUJE DE TÍTULOS DEBAJO DEL HEADER
+       ========================================================================== */
+    
+    /* Ajuste para Ropa: Más espacio arriba y margen directo al h2 para que no se moche */
+    .pantalla-ropa {
+        padding-top: 140px !important; 
+    }
+    .pantalla-ropa h2, .pantalla-ropa .titulo-seccion h2 {
+        margin-top: 20px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Ajuste para Zapatos: Mismo empuje para rescatar el texto del menú */
+    .pantalla-zapatos {
+        padding-top: 140px !important;
+    }
+    .pantalla-zapatos h2, .pantalla-zapatos .titulo-seccion h2 {
+        margin-top: 20px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Gorras se queda tal cual a como ya te funciona perfecto */
+    .pantalla-gorras {
+        padding-top: 80px !important;
     }
 }
