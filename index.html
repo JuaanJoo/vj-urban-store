@@ -30,7 +30,7 @@
 <nav>
     <ul>
         <li><a href="#" onclick="irAPantalla('.pantalla-ropa, .pantalla-zapatos, .pantalla-gorras, .pantalla-ropa-interior', '.categorias-seccion', event)">Inicio</a></li>
-        <li><a href="#" class="btn-menu-ropa" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa', event)">Ropa</a></li>
+        <li><a href="#" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa', event)">Ropa</a></li>
         <li><a href="#" class="btn-menu-zapatos" onclick="irAPantalla('.pantalla-activa', '.pantalla-zapatos', event)">Zapatos</a></li>
         <li><a href="#" class="btn-menu-gorras" onclick="irAPantalla('.pantalla-activa', '.pantalla-gorras', event)">Gorras</a></li>
         <li><a href="#" class="btn-menu-ropa-interior" onclick="irAPantalla('.pantalla-activa', '.pantalla-ropa-interior', event)">Ropa Interior</a></li>
@@ -57,10 +57,9 @@
     </div>
     <div class="categorias-grid">
         
-        <a href="#" class="categoria-card" style="background-image: url('img/categoria_ropa.png'); background-size: cover;" onclick="irAPantalla('.categorias-seccion', '.pantalla-ropa', event)">
-            <h3>ROPA</h3>
-            <span>VER MÁS</span>
-        </a>
+        <a href="#" class="categoria-card" onclick="irAPantalla('.categorias-seccion', '.pantalla-ropa-edades', event)">
+                <h3>ROPA</h3>
+            </a>
         
         <a href="#" class="categoria-card" style="background-image: url('img/categoria_zapatos.png'); background-size: cover;" onclick="irAPantalla('.categorias-seccion', '.pantalla-zapatos', event)">
             <h3>ZAPATOS</h3>
@@ -387,6 +386,170 @@
             }
         }
     </script>
-    
+
+
+<section class="pantalla-ropa-edades categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>¿PARA QUIÉN BUSCAS ROPA?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-edades', '.pantalla-ropa-bebes-genero', event)">
+                <h3>BEBÉS</h3>
+                <span style="color: #888; font-size: 0.9rem; display: block; margin-top: 5px;">0 a 2 años</span>
+            </div>
+
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-edades', '.pantalla-ropa-ninos-genero', event)">
+                <h3>NIÑOS</h3>
+                <span style="color: #888; font-size: 0.9rem; display: block; margin-top: 5px;">3 a 12 años</span>
+            </div>
+
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-edades', '.pantalla-ropa-adolescentes-genero', event)">
+                <h3>ADOLESCENTES</h3>
+                <span style="color: #888; font-size: 0.9rem; display: block; margin-top: 5px;">13 a 17 años</span>
+            </div>
+
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-edades', '.pantalla-ropa-adultos-genero', event)">
+                <h3>ADULTOS</h3>
+                <span style="color: #888; font-size: 0.9rem; display: block; margin-top: 5px;">Prendas Urbanas</span>
+            </div>
+
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-edades', '.pantalla-ropa-ancianos-genero', event)">
+                <h3>ADULTOS MAYORES</h3>
+                <span style="color: #888; font-size: 0.9rem; display: block; margin-top: 5px;">Comodidad</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-bebes-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA BEBÉS: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-bebes-genero', '.pantalla-ropa-bebes-nino-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">BABY BOY</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-bebes-genero', '.pantalla-ropa-bebes-nina-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">BABY GIRL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-ninos-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA NIÑOS: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ninos-genero', '.pantalla-ropa-ninos-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">KIDS FLOW</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ninos-genero', '.pantalla-ropa-ninas-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">GIRLS STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-adolescentes-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA ADOLESCENTES: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adolescentes-genero', '.pantalla-ropa-joven-hombre-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">YOUNG FLOW</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adolescentes-genero', '.pantalla-ropa-joven-mujer-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">TEEN STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-ancianos-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ADULTOS MAYORES: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ancianos-genero', '.pantalla-ropa-ancianos-hombre-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">CLASSIC COMFORT</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ancianos-genero', '.pantalla-ropa-ancianos-mujer-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">GOLDEN STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-adultos-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA ADULTOS: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adultos-genero', '.pantalla-ropa-hombre-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">URBAN FLOW</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adultos-genero', '.pantalla-ropa-mujer-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">STREET STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-ninos-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA NIÑOS: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ninos-genero', '.pantalla-ropa-ninos-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">KIDS FLOW</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ninos-genero', '.pantalla-ropa-ninas-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">GIRLS STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-adolescentes-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ROPA ADOLESCENTES: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adolescentes-genero', '.pantalla-ropa-joven-hombre-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">YOUNG FLOW</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-adolescentes-genero', '.pantalla-ropa-joven-mujer-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">TEEN STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pantalla-ropa-ancianos-genero categorias-seccion" style="display: none;">
+        <div class="titulo-seccion">
+            <h2>ADULTOS MAYORES: ¿QUÉ ESTILO BUSCAS?</h2>
+        </div>
+        <div class="categorias-grid">
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ancianos-genero', '.pantalla-ropa-ancianos-hombre-productos', event)">
+                <h3>MASCULINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">CLASSIC COMFORT</span>
+            </div>
+            <div class="categoria-card" onclick="irAPantalla('.pantalla-ropa-ancianos-genero', '.pantalla-ropa-ancianos-mujer-productos', event)">
+                <h3>FEMENINO</h3>
+                <span style="color: #ff3333; font-size: 0.85rem; font-weight: bold; display: block; margin-top: 5px;">GOLDEN STYLE</span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script> 
+</body>
+</html>
 </body>
 </html>    

@@ -616,8 +616,6 @@ header nav {
 .pantalla-ropa-interior.pantawa-activa ~ header nav,
 body:has(.pantalla-ropa.pantalla-activa) header nav,
 body:has(.pantalla-zapatos.pantalla-activa) header nav,
-body:has(.pantalla-gorras.pantalla-activa) header nav,
-body:has(.pantalla-ropa-interior.pantalla-activa) 
 
 header nav {
 display: block !important;
@@ -628,5 +626,162 @@ display: block !important;
     height: 100%;
     object-fit: cover; /* Hace que la foto llene el recuadro sin deformarse */
     display: block;
+}
+
+/* ==========================================================================
+   ESTILOS PARA LAS NUEVAS SUB-CATEGORÍAS (V&J URBAN STORE)
+   ========================================================================== */
+
+/* Aseguramos que las nuevas pantallas ocupen todo el ancho */
+.pantalla-ropa-edades, 
+.pantalla-ropa-adultos-genero {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedores de las tarjetas: En celulares se apilan una abajo de otra */
+.edades-grid, 
+.genero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Diseño urbano para las tarjetas de Edades y Géneros */
+.edad-card, 
+.genero-card {
+    background-color: #111; /* Fondo negro urbano */
+    border: 2px solid #222;  /* Borde gris oscuro */
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efecto cuando pasas el mouse por encima o las tocas */
+.edad-card:hover, 
+.genero-card:hover {
+    border-color: #fff; /* El borde se vuelve blanco */
+    transform: scale(1.02); /* Se agrandan un poquitico */
+}
+
+.edad-card h3, 
+.genero-card h3 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.edad-card span {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.tag-urbano {
+    color: #ff3333; /* Detalle rojo llamativo */
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* DISEÑO PARA PC: Cuando la pantalla sea grande, se ponen de lado */
+@media (min-width: 768px) {
+    .edades-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas alineadas */
+        gap: 20px;
+    }
+    .genero-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas alineadas (Mitad y mitad) */
+        gap: 20px;
+    }
+}
+
+/* ==========================================================================
+   ESTILOS PARA LAS NUEVAS SUB-CATEGORÍAS (V&J URBAN STORE) - CORREGIDO FONDO
+   ========================================================================== */
+
+/* Aseguramos que las nuevas pantallas ocupen todo el ancho y tengan el fondo oscuro del Hero */
+/* Agregamos las nuevas clases para que todas tengan el mismo fondo oscuro */
+.pantalla-ropa-edades, 
+.pantalla-ropa-adultos-genero,
+.pantalla-ropa-bebes-genero,
+.pantalla-ropa-ninos-genero,
+.pantalla-ropa-adolescentes-genero,
+.pantalla-ropa-ancianos-genero {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #0b0f19 !important; /* Mismo fondo oscuro de la bienvenida */
+}
+
+/* Contenedores de las tarjetas: En celulares se apilan una abajo de otra */
+.edades-grid, 
+.genero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Diseño urbano para las tarjetas de Edades y Géneros */
+.edad-card, 
+.genero-card {
+    background-color: #11141e !important; /* Mismo fondo que tus producto-card para que combine */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important; /* Borde sutil premium */
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efecto cuando pasas el mouse por encima o las tocas en el cel */
+.edad-card:hover, 
+.genero-card:hover {
+    border-color: #ff2a2a !important; /* El borde se ilumina con tu rojo urbano #ff2a2a */
+    transform: scale(1.02); /* Se agrandan un poquitico */
+    box-shadow: 0 10px 20px rgba(255, 42, 42, 0.15);
+}
+
+.edad-card h3, 
+.genero-card h3 {
+    color: #fff !important;
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.edad-card span {
+    color: #888 !important;
+    font-size: 0.9rem;
+}
+
+.tag-urbano {
+    color: #ff2a2a !important; /* Tu rojo corporativo */
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 5px;
+}
+
+/* DISEÑO PARA PC: Cuando la pantalla sea grande, se ponen de lado */
+@media (min-width: 768px) {
+    .edades-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas alineadas */
+        gap: 20px;
+    }
+    .genero-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas alineadas (Mitad y mitad) */
+        gap: 20px;
+    }
 }
 
