@@ -605,3 +605,20 @@ nav ul li:has(a[style*="display: none"]) {
         line-height: 1.4 !important;
     }
 }
+
+header nav {
+    display: none !important;
+}
+
+.pantalla-ropa.pantalla-activa ~ header nav,
+.pantalla-zapatos.pantalla-activa ~ header nav,
+.pantalla-gorras.pantalla-activa ~ header nav,
+.pantalla-ropa-interior.pantawa-activa ~ header nav,
+body:has(.pantalla-ropa.pantalla-activa) header nav,
+body:has(.pantalla-zapatos.pantalla-activa) header nav,
+body:has(.pantalla-gorras.pantalla-activa) header nav,
+body:has(.pantalla-ropa-interior.pantalla-activa) 
+
+header nav {
+display: block !important;
+}
