@@ -622,3 +622,11 @@ body:has(.pantalla-ropa-interior.pantalla-activa)
 header nav {
 display: block !important;
 }
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la foto llene el recuadro sin deformarse */
+    display: block;
+}
+
